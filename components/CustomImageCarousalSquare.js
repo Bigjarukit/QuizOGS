@@ -61,10 +61,9 @@ const CustomImageCarousal = ({ data,  pagination }) => {
                     return (
                         <View style={{ width: SIZE  ,paddingRight: 50}} key={index}>
                             <Animated.View style={[styles.imageContainer, style]}>
-                                {/* <Image source={item.image} style={styles.image} /> */}
+                                
                                 <View >
                                     <LinearGradient
-                                        // Button Linear Gradient
                                         colors={['#4b6a81', '#254159', '#0b1d2d']}
                                         style={[styles.ctnVisa,]}>
 
@@ -114,7 +113,7 @@ export default CustomImageCarousal;
 
 const styles = StyleSheet.create({
     imageContainer: {
-        overflow: 'hidden',
+        overflow: 'hidden'
     },
     image: {
         width: '100%',
