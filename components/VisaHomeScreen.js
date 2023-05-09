@@ -11,24 +11,27 @@ const color_blue = '#22577A';
 const color_red = '#d13c3c';
 const color_grey = '#b1b1b1';
 
+// จำนวน Slide card visa
 const data = [
   {
-    image: require('../assets/image-product-1.jpg'),
+    card: 1,
   },
   {
-    image: require('../assets/image-product-2.jpg'),
+    card: 2,
   },
   {
-    image: require('../assets/image-product-3.jpg'),
+    card: 3,
   },
-  
 ];
 
 export default function visa({ navigation }) {
   return (
     <View style={{ flex: 1 }}>
 
-      <View style={[styles.container,]}>
+      
+      <View style={[styles.container]}>
+
+        {/* component ส่วนบน */}
         <View style={[styles.containerBtw, { alignItems: 'center' }]}>
           <Text style={[styles.textXl, { color: color_blue }]}>All my accounts</Text>
 
@@ -39,57 +42,18 @@ export default function visa({ navigation }) {
         </View>
         <Text style={[styles.textSSm, { paddingBottom: 16, color: color_grey }]} >June 10,2018</Text>
 
-        {/* visa */}
-        {/* <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('VisaCardScreen')}>
-          <LinearGradient
-            // Button Linear Gradient
-            colors={['#4b6a81', '#254159', '#0b1d2d']}
-            style={[styles.ctnVisa, { marginBottom: 24 }]}>
-            <View style={[styles.containerBtw, { alignItems: 'flex-end' }]}>
-              <View style={{ flexDirection: 'column' }}>
-                <Image source={require('../assets/ILMT-visa-logo.png')} style={styles.imageVisa} />
-                <Image source={require('../assets/FaHZ-chip-credit-card-png-4.png')} style={styles.imageVisa} />
-              </View>
-
-              <View style={{ flexDirection: 'column' }}>
-                <Text style={[styles.textSm, { color: '#149c2b', fontWeight: 'normal' }]}>Available Balance</Text>
-                <Text style={[styles.textXl, { color: '#fff', fontWeight: 'normal' }]}>$ 7,392.00</Text>
-              </View>
-            </View>
-
-            <View style={[styles.containerBtw, { marginVertical: 10, marginHorizontal: 0 }]}>
-              <Text style={[styles.textMd, { color: '#fff', fontWeight: 'normal' }]}>42012</Text>
-              <Text style={[styles.textMd, { color: '#fff', fontWeight: 'normal' }]}>3049</Text>
-              <Text style={[styles.textMd, { color: '#fff', fontWeight: 'normal' }]}>2800</Text>
-              <Text style={[styles.textMd, { color: '#fff', fontWeight: 'normal' }]}>9815</Text>
-
-            </View>
-
-            <View style={styles.containerBtw}>
-              <View style={[styles.containerBtw, { alignItems: 'center' }]}>
-                <Text style={[styles.textSSm, { color: '#fff', fontWeight: 'normal' }]}>EXPIRE * </Text>
-                <Text style={[styles.textSm, { color: '#fff', fontWeight: 'normal' }]}> 02/22</Text>
-              </View>
-              <View style={[styles.containerBtw, { alignItems: 'center' }]}>
-                <Text style={[styles.textSSm, { color: '#fff', fontWeight: 'normal' }]}>CVC CODE * </Text>
-                <Text style={[styles.textSm, { color: '#fff', fontWeight: 'normal' }]}> 230</Text>
-              </View>
-            </View>
-          </LinearGradient>
-        </TouchableOpacity> */}
+        {/* Slide card visa */}
         <CustomImageCarousalSquare
           data={data}
-          
           pagination={true}
         />
-
-
-
       </View>
-
+      
+      {/* component ส่วนกลาง */}
       <View style={{ paddingHorizontal: 24 }}>
         <View style={[styles.containerBtw, styles.ctnBoxXl,]}>
 
+          {/* Income */}
           <View style={{ flexDirection: 'column' }}>
             <View style={[styles.ctnBoxSm, { justifyContent: 'center', alignItems: 'center', paddingVertical: 4 }]}>
               <Text style={[styles.textSSm, { color: color_blue }]}>Income</Text>
@@ -104,6 +68,7 @@ export default function visa({ navigation }) {
           </View>
 
 
+          {/* Expense */}
           <View style={{ flexDirection: 'column' }}>
             <View style={[styles.ctnBoxSm, { justifyContent: 'center', alignItems: 'center', paddingVertical: 4 }]}>
               <Text style={[styles.textSSm, { color: color_blue }]}>Expense</Text>
@@ -122,8 +87,10 @@ export default function visa({ navigation }) {
         </View>
       </View>
 
-
+      {/* component ส่วนล่าง */}
       <ScrollView style={styles.container}>
+
+        {/* menu item 1 */}
         <View style={[styles.containerBtw, styles.ctnBoxXl, { marginBottom: 16 }]}>
           <View style={[styles.containerRow, { alignItems: 'center' }]}>
             <MaterialIcons name="restaurant" size={30} color="black" />
@@ -138,6 +105,7 @@ export default function visa({ navigation }) {
           </View>
         </View>
 
+         {/* menu item 2 */}
         <View style={[styles.containerBtw, styles.ctnBoxXl, { marginBottom: 16 }]}>
           <View style={[styles.containerRow, { alignItems: 'center' }]}>
             <MaterialIcons name="attach-money" size={24} color="black" />
@@ -152,6 +120,7 @@ export default function visa({ navigation }) {
           </View>
         </View>
 
+         {/* menu item 3 */}
         <View style={[styles.containerBtw, styles.ctnBoxXl, { marginBottom: 16 }]}>
           <View style={[styles.containerRow, { alignItems: 'center' }]}>
             <Fontisto name="shopping-bag-1" size={24} color="black" />
@@ -166,6 +135,7 @@ export default function visa({ navigation }) {
           </View>
         </View>
 
+         {/* menu item 4 */}
         <View style={[styles.containerBtw, styles.ctnBoxXl, { marginBottom: 16 }]}>
           <View style={[styles.containerRow, { alignItems: 'center' }]}>
             <MaterialIcons name="attach-money" size={24} color="black" />
@@ -179,7 +149,6 @@ export default function visa({ navigation }) {
             <AntDesign name="arrowdown" size={16} style={{ color: color_green }} />
           </View>
         </View>
-
 
       </ScrollView >
     </View  >

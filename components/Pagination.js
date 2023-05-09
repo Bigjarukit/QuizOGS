@@ -14,7 +14,7 @@ const Pagination = ({data, x, size}) => {
           const widthAnimation = interpolate(
             x.value,
             [(i - 1) * size, i * size, (i + 1) * size],
-            [10, 20, 10],
+            [10, 10, 10],
             Extrapolate.CLAMP,
           );
           const opacityAnimation = interpolate(
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   dots: {
     height: 10,
-    backgroundColor: 'orange',
+    backgroundColor: '#22577A',
     marginHorizontal: 10,
     borderRadius: 5,
   },

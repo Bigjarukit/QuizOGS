@@ -19,6 +19,7 @@ const VisaCardScreen = () => {
       <LinearGradient colors={['#4b6a81', '#254159', '#0b1d2d']}
         style={[, { height: 330, width: '100%', }]}>
 
+        {/* component ส่วนบน*/}
         <View style={styles.container}>
           <View style={styles.containerBtw}>
             <FontAwesome name="bars" size={24} color="#fff" />
@@ -32,7 +33,7 @@ const VisaCardScreen = () => {
           </View>
 
           {/* visa */}
-          <TouchableOpacity style={{ paddingHorizontal: 10 }} >
+          <TouchableOpacity style={{ paddingHorizontal: 10 ,}}  >
             <LinearGradient
               // Button Linear Gradient
               colors={['#4b6a81', '#254159', '#0b1d2d']}
@@ -62,14 +63,14 @@ const VisaCardScreen = () => {
           </TouchableOpacity>
         </View>
 
-
-
-
       </LinearGradient>
 
       <View style={{ marginTop: -55, paddingHorizontal: 24 }}>
+        
+        {/* component ส่วนกลาง*/}
         <View style={[styles.containerBtw, styles.ctnBoxXl]}>
 
+          {/* Income */}
           <View style={{ flexDirection: 'column' }}>
             <View style={[styles.ctnBoxSm, { justifyContent: 'center', alignItems: 'center', paddingVertical: 4 }]}>
               <Text style={[styles.textSSm, { color: color_blue }]}>Income</Text>
@@ -83,7 +84,7 @@ const VisaCardScreen = () => {
           <View style={{ backgroundColor: color_grey, width: 2, height: "100%" }}>
           </View>
           
-
+          {/* Expense */}
           <View style={{ flexDirection: 'column' }}>
             <View style={[styles.ctnBoxSm, { justifyContent: 'center', alignItems: 'center', paddingVertical: 4 }]}>
               <Text style={[styles.textSSm, { color: color_blue }]}>Expense</Text>
@@ -106,9 +107,11 @@ const VisaCardScreen = () => {
       </View>
 
 
+      {/* component ส่วนล่าง */}
       <ScrollView style={{ flex: 1, }}>
         <View style={{ paddingHorizontal: 24, width: '100%', }}>
 
+          {/* menu item 1 */}
           <View style={[styles.containerBtw, styles.ctnBoxXl, { marginBottom: 16 }]}>
             <View style={[styles.containerRow, { alignItems: 'center' }]}>
               <MaterialIcons name="restaurant" size={30} color="black" />
@@ -123,6 +126,7 @@ const VisaCardScreen = () => {
             </View>
           </View>
 
+          {/* menu item 2 */}
           <View style={[styles.containerBtw, styles.ctnBoxXl, { marginBottom: 16 }]}>
             <View style={[styles.containerRow, { alignItems: 'center' }]}>
               <MaterialIcons name="attach-money" size={24} color="black" />
@@ -137,6 +141,7 @@ const VisaCardScreen = () => {
             </View>
           </View>
 
+          {/* menu item 3 */}
           <View style={[styles.containerBtw, styles.ctnBoxXl, { marginBottom: 16 }]}>
             <View style={[styles.containerRow, { alignItems: 'center' }]}>
               <Fontisto name="shopping-bag-1" size={24} color="black" />
@@ -151,6 +156,7 @@ const VisaCardScreen = () => {
             </View>
           </View>
 
+          {/* menu item 4 */}
           <View style={[styles.containerBtw, styles.ctnBoxXl, { marginBottom: 16 }]}>
             <View style={[styles.containerRow, { alignItems: 'center' }]}>
               <MaterialIcons name="attach-money" size={24} color="black" />
@@ -165,6 +171,7 @@ const VisaCardScreen = () => {
             </View>
           </View>
 
+          {/* menu item 5 */}
           <View style={[styles.containerBtw, styles.ctnBoxXl, { marginBottom: 16 }]}>
             <View style={[styles.containerRow, { alignItems: 'center' }]}>
               <Fontisto name="shopping-bag-1" size={24} color="black" />
