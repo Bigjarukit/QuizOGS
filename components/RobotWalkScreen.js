@@ -106,7 +106,6 @@ export default function RobotWalkScreen({ navigation }) {
                 </TouchableOpacity>
 
                 <View style={{ flexDirection: 'row', paddingVertical: 10 }}>
-                    <Text>ตำเเหน่งปัจจุบัน</Text>
                     <Text>ตำเเหน่งปัจจุบัน : ({positionX} , {positionY})</Text>
                 </View>
 
